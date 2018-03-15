@@ -25,19 +25,16 @@ class RegusterUserVC: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func backToHome(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+    }
     @IBAction func SaveUser(_ sender: Any) {
         saveToBase()
         firstName.text = ""
         lastName.text = ""
         email.text = ""
         phoneNumber.text = ""
-    }
-    
-    @IBAction func searchUser(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "xxxSearchVC")
-        self.present(vc!, animated: true, completion: nil)
-       // self.navigationController?.pushViewController(vc!, animated: true)
-        
     }
     func saveToBase() {
         let contaner = NSEntityDescription.insertNewObject(forEntityName: "Users", into: contextUser)

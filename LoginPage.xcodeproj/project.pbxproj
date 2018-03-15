@@ -13,6 +13,8 @@
 		2BF6ABDB202832B30042936B /* LoginPage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6ABD9202832B30042936B /* LoginPage.xcdatamodeld */; };
 		2BF6ABDD202832B30042936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6ABDC202832B30042936B /* Assets.xcassets */; };
 		2BF6ABE0202832B30042936B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6ABDE202832B30042936B /* LaunchScreen.storyboard */; };
+		BD200204205AA653003D5CCE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD200203205AA653003D5CCE /* HomeVC.swift */; };
+		BD200206205AC1CE003D5CCE /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD200205205AC1CE003D5CCE /* UserObject.swift */; };
 		BD45C3C0205A662F00D158A5 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45C3BF205A662F00D158A5 /* SearchVC.swift */; };
 		BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		2BF6ABDC202832B30042936B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BF6ABDF202832B30042936B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BF6ABE1202832B30042936B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD200203205AA653003D5CCE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BD200205205AC1CE003D5CCE /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		BD45C3BF205A662F00D158A5 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegusterUserVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,9 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				2BF6ABD2202832B30042936B /* AppDelegate.swift */,
-				2BF6ABD4202832B30042936B /* LogInVc.swift */,
+				BD200203205AA653003D5CCE /* HomeVC.swift */,
 				BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */,
 				BD45C3BF205A662F00D158A5 /* SearchVC.swift */,
+				BD200205205AC1CE003D5CCE /* UserObject.swift */,
+				2BF6ABD4202832B30042936B /* LogInVc.swift */,
 				2BF6ABD6202832B30042936B /* Main.storyboard */,
 				2BF6ABDC202832B30042936B /* Assets.xcassets */,
 				2BF6ABDE202832B30042936B /* LaunchScreen.storyboard */,
@@ -148,8 +154,10 @@
 				BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */,
 				BD45C3C0205A662F00D158A5 /* SearchVC.swift in Sources */,
 				2BF6ABDB202832B30042936B /* LoginPage.xcdatamodeld in Sources */,
+				BD200204205AA653003D5CCE /* HomeVC.swift in Sources */,
 				2BF6ABD5202832B30042936B /* LogInVc.swift in Sources */,
 				2BF6ABD3202832B30042936B /* AppDelegate.swift in Sources */,
+				BD200206205AC1CE003D5CCE /* UserObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
