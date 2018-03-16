@@ -9,32 +9,33 @@
 import UIKit
 import CoreData
 
+
 class SearchVC: UIViewController {
 
     @IBOutlet weak var userConsolList: UITextView!
     @IBOutlet weak var chackUserBtn: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var object: Array<UserObject> = []
+    var filteredObjectList: Array<UserObject> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-
+    
     @IBAction func close(_ sender: Any) {
        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func searchBtn(_ sender: Any) {
-        let userNames = loadFromBase(Atribute: "firstName")
-        let userPassword = loadFromBase(Atribute: "lastName")
-        let email = loadFromBase(Atribute: "email")
-        let phoneNumber = loadFromBase(Atribute: "phoneNumber")
-        if userNames.count>0 {
-            userConsolList.text? = "\(userNames) - \(userPassword) - \(email) - \(phoneNumber)"
-        } else {
-            userConsolList.text? = "Users not found"
-        }
+        object = loadFromBase() as! Array<UserObject>
+        tableView.reloadData()
+    
     }
 
-    func loadFromBase(Atribute:String) -> Array<Any> {
+    func loadFromBase() -> Array<Any> {
         var returnedArray = Array<Any>()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         request.returnsObjectsAsFaults = false
@@ -42,8 +43,25 @@ class SearchVC: UIViewController {
             let results = try context.fetch(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
-                    if let fetched = result.value(forKey: Atribute) as? String {
-                        returnedArray.append(fetched)
+                    let userObj = UserObject()
+                    if let fetched = result.value(forKey: "email") as? String {
+                        userObj.email = fetched
+        
+                    }
+                    if let fetched = result.value(forKey: "firstName") as? String {
+                        userObj.firstname = fetched
+                        
+                    }
+                    if let fetched = result.value(forKey: "lastName") as? String {
+                        userObj.lastname = fetched
+                        
+                    }
+                    if let fetched = result.value(forKey: "phoneNumber") as? String {
+                        userObj.phoneNumber = fetched
+                        
+                    }
+                    if userObj.email != nil && userObj.firstname != nil && userObj.lastname != nil && userObj.phoneNumber != nil {
+                    returnedArray.append(userObj)
                     }
                 }
             } else {
@@ -56,3 +74,30 @@ class SearchVC: UIViewController {
     }
 
 }
+extension SearchVC : UITableViewDelegate ,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.object.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+       let userCell = tableView.dequeueReusableCell(withIdentifier: "xxxUserObjectCell", for: indexPath) as! UserObjectCell
+        
+        let userItem: UserObject!
+        userItem = object[indexPath.row]
+        
+
+        userCell.email.text = userItem.email
+        userCell.name.text = userItem.firstname
+        userCell.lastname.text = userItem.lastname
+        userCell.phoneNumber.text = userItem.phoneNumber
+        return userCell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 172
+    }
+}
+

@@ -10,11 +10,12 @@ import UIKit
 import CoreData
 
 
-class UserObject: NSManagedObject {
+
+class UserObject: NSObject {
     
-    var firstname : String?
-    var lastname : String?
-    var email : String?
-    var phoneNumber : String?
+var firstname : String?
+var lastname : String?
+var email : String?
+var phoneNumber : String?
 
 }
