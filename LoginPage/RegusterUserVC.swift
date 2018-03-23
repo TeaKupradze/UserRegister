@@ -23,11 +23,12 @@ class RegusterUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveBtn.layer.cornerRadius = 20
+        saveBtn.layer.masksToBounds = true
 
     }
     @IBAction func backToHome(_ sender: Any) {
-        
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func SaveUser(_ sender: Any) {
         saveToBase()
@@ -35,6 +36,8 @@ class RegusterUserVC: UIViewController {
         lastName.text = ""
         email.text = ""
         phoneNumber.text = ""
+        //dismiss(animated: true, completion: nil)
+    
     }
     func saveToBase() {
         let contaner = NSEntityDescription.insertNewObject(forEntityName: "Users", into: contextUser)
