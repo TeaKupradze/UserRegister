@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import CoreData
+
+let appDelegate = AppDelegate()
+let context = appDelegate.persistentContainer.viewContext
 
 class HomeVC: UIViewController {
 
@@ -41,7 +45,8 @@ class HomeVC: UIViewController {
     
     @IBAction func searchTapped(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "xxxSearchVC")
-        self.navigationController?.pushViewController(vc!, animated: true)
+         self.present(vc!, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(vc!, animated: true)
     
     }
     

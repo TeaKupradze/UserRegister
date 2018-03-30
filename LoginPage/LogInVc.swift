@@ -28,8 +28,8 @@
 import UIKit
 import CoreData
 
-let appDelegate = AppDelegate()
-let context = appDelegate.persistentContainer.viewContext
+//let appDelegate = AppDelegate()
+//let context = appDelegate.persistentContainer.viewContext
 
 class ViewController: UIViewController {
     

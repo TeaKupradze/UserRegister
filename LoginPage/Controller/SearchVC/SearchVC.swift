@@ -12,7 +12,7 @@ import CoreData
 
 class SearchVC: UIViewController {
 
-    @IBOutlet weak var userConsolList: UITextView!
+   // @IBOutlet weak var userConsolList: UITextView!
     @IBOutlet weak var chackUserBtn: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,10 +23,25 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        hideKeyboard()
+    }
+
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+        
+             view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
     @IBAction func close(_ sender: Any) {
-       navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func searchBtn(_ sender: Any) {
@@ -65,10 +80,10 @@ class SearchVC: UIViewController {
                     }
                 }
             } else {
-                userConsolList.text? = "No result"
+               // userConsolList.text? = "No result"
             }
         } catch  {
-            userConsolList.text? = "Error fetching from base"
+           // userConsolList.text? = "Error fetching from base"
         }
         return returnedArray
     }
@@ -87,8 +102,7 @@ extension SearchVC : UITableViewDelegate ,UITableViewDataSource {
         
         let userItem: UserObject!
         userItem = object[indexPath.row]
-        
-
+    
         userCell.email.text = userItem.email
         userCell.name.text = userItem.firstname
         userCell.lastname.text = userItem.lastname
