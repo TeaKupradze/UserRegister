@@ -203,6 +203,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="22"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LogInClickd:" destination="MFa-pn-PJW" eventType="touchUpInside" id="cqh-dd-vpo"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sId-Dl-h2y">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
@@ -233,6 +236,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UtQ-zs-y9S"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPassword" destination="VMH-7h-lUi" id="6TP-fF-Fxf"/>
+                        <outlet property="txtUserName" destination="Ys4-BV-rO2" id="OuP-lp-Lc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj3-X7-FUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

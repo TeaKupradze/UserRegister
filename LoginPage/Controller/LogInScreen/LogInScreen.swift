@@ -9,11 +9,20 @@
 import UIKit
 
 class LogInScreen: UIViewController {
-
+    
+    
+    @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
     }
-
+    
+    
+    @IBAction func LogInClickd(_ sender: Any) {
+        
+    }
+    
 }
