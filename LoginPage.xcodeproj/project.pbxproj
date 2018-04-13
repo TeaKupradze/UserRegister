@@ -19,6 +19,7 @@
 		BDA2ABB7206A31AE003C1C18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA2ABB6206A31AE003C1C18 /* Info.plist */; };
 		BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */; };
 		BDD3360A205BF414009107C8 /* UserObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD33609205BF414009107C8 /* UserObjectCell.swift */; };
+		BDD7EED12080FC1A00322602 /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD7EED02080FC1A00322602 /* LogInScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BDA2ABB6206A31AE003C1C18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegusterUserVC.swift; sourceTree = "<group>"; };
 		BDD33609205BF414009107C8 /* UserObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObjectCell.swift; sourceTree = "<group>"; };
+		BDD7EED02080FC1A00322602 /* LogInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +84,10 @@
 		BDA2ABAF206A2C8A003C1C18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BDA2ABB3206A2D03003C1C18 /* SearchVC */,
-				BD200203205AA653003D5CCE /* HomeVC.swift */,
-				BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */,
+				BDD7EECF2080FBF900322602 /* LogInScreen */,
+				BDD7EECB2080EC8E00322602 /* HomeScreen */,
+				BDD7EECC2080ECAB00322602 /* RegisterClientScreen */,
+				BDA2ABB3206A2D03003C1C18 /* SearchScreen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,13 +117,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		BDA2ABB3206A2D03003C1C18 /* SearchVC */ = {
+		BDA2ABB3206A2D03003C1C18 /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
 				BDD33609205BF414009107C8 /* UserObjectCell.swift */,
 				BD45C3BF205A662F00D158A5 /* SearchVC.swift */,
 			);
-			path = SearchVC;
+			path = SearchScreen;
 			sourceTree = "<group>";
 		};
 		BDA2ABB4206A2D23003C1C18 /* DataModel */ = {
@@ -129,6 +132,30 @@
 				2BF6ABD9202832B30042936B /* LoginPage.xcdatamodeld */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BDD7EECB2080EC8E00322602 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BD200203205AA653003D5CCE /* HomeVC.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		BDD7EECC2080ECAB00322602 /* RegisterClientScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */,
+			);
+			path = RegisterClientScreen;
+			sourceTree = "<group>";
+		};
+		BDD7EECF2080FBF900322602 /* LogInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDD7EED02080FC1A00322602 /* LogInScreen.swift */,
+			);
+			path = LogInScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */,
+				BDD7EED12080FC1A00322602 /* LogInScreen.swift in Sources */,
 				BD45C3C0205A662F00D158A5 /* SearchVC.swift in Sources */,
 				2BF6ABDB202832B30042936B /* LoginPage.xcdatamodeld in Sources */,
 				BD200204205AA653003D5CCE /* HomeVC.swift in Sources */,
