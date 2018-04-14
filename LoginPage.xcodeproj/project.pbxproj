@@ -16,6 +16,7 @@
 		BD200204205AA653003D5CCE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD200203205AA653003D5CCE /* HomeVC.swift */; };
 		BD200206205AC1CE003D5CCE /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD200205205AC1CE003D5CCE /* UserObject.swift */; };
 		BD45C3C0205A662F00D158A5 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45C3BF205A662F00D158A5 /* SearchVC.swift */; };
+		BD5DFA6F2081DC870042E5CF /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DFA6E2081DC870042E5CF /* RegistrationScreen.swift */; };
 		BDA2ABB7206A31AE003C1C18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA2ABB6206A31AE003C1C18 /* Info.plist */; };
 		BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */; };
 		BDD3360A205BF414009107C8 /* UserObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD33609205BF414009107C8 /* UserObjectCell.swift */; };
@@ -33,6 +34,7 @@
 		BD200203205AA653003D5CCE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BD200205205AC1CE003D5CCE /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		BD45C3BF205A662F00D158A5 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		BD5DFA6E2081DC870042E5CF /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		BDA2ABB6206A31AE003C1C18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegusterUserVC.swift; sourceTree = "<group>"; };
 		BDD33609205BF414009107C8 /* UserObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObjectCell.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		BDD7EECC2080ECAB00322602 /* RegisterClientScreen */ = {
 			isa = PBXGroup;
 			children = (
+				BD5DFA6E2081DC870042E5CF /* RegistrationScreen.swift */,
 				BDC2CA792059712900B1E2A8 /* RegusterUserVC.swift */,
 			);
 			path = RegisterClientScreen;
@@ -233,6 +236,7 @@
 			files = (
 				BDC2CA7A2059712900B1E2A8 /* RegusterUserVC.swift in Sources */,
 				BDD7EED12080FC1A00322602 /* LogInScreen.swift in Sources */,
+				BD5DFA6F2081DC870042E5CF /* RegistrationScreen.swift in Sources */,
 				BD45C3C0205A662F00D158A5 /* SearchVC.swift in Sources */,
 				2BF6ABDB202832B30042936B /* LoginPage.xcdatamodeld in Sources */,
 				BD200204205AA653003D5CCE /* HomeVC.swift in Sources */,

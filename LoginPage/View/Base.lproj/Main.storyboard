@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MFa-pn-PJW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BsK-jw-wIg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -97,12 +102,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1745" y="-58"/>
+            <point key="canvasLocation" x="-2695" y="-67"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration Screen-->
         <scene sceneID="TZt-Sg-6xL">
             <objects>
-                <viewController id="MXR-JY-TDO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationScreen" id="MXR-JY-TDO" customClass="RegistrationScreen" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOk-Hp-OKk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,20 +139,39 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.54901960780000003" green="0.68235294120000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registrationButtonClickd:" destination="MXR-JY-TDO" eventType="touchUpInside" id="LOg-OX-7dK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loc-yJ-XFc">
+                                <rect key="frame" x="6" y="20" width="50" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonClickd:" destination="MXR-JY-TDO" eventType="touchUpInside" id="Z2C-h8-M4E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="msk-GV-3F6"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="Ss9-pu-Quk" id="ZTF-O2-4Wi"/>
+                        <outlet property="userName" destination="Tbr-vl-19y" id="yWh-zT-rzG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUE-BK-6dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293.60000000000002" y="-751.57421289355329"/>
+            <point key="canvasLocation" x="-372" y="-757.87106446776613"/>
         </scene>
         <!--Log In Screen-->
         <scene sceneID="eYV-rS-5Cx">
             <objects>
-                <viewController id="MFa-pn-PJW" customClass="LogInScreen" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInScreen" id="MFa-pn-PJW" customClass="LogInScreen" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xK8-8x-ZFk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +248,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="17"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="RegisterButtonClickd:" destination="MFa-pn-PJW" eventType="touchUpInside" id="WYB-eP-miw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-pI-ShK">
                                 <rect key="frame" x="95" y="607" width="185" height="18"/>
@@ -236,6 +263,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UtQ-zs-y9S"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1ks-eQ-AtW"/>
                     <connections>
                         <outlet property="txtPassword" destination="VMH-7h-lUi" id="6TP-fF-Fxf"/>
                         <outlet property="txtUserName" destination="Ys4-BV-rO2" id="OuP-lp-Lc0"/>
@@ -243,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj3-X7-FUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293.60000000000002" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="-372" y="-99"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="7xf-nr-c4A">
@@ -325,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxR-Qy-PYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="536.79999999999995" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="876" y="-81.409295352323838"/>
         </scene>
         <!--Reguster UserVC-->
         <scene sceneID="lOO-2Z-Vaw">
@@ -433,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXX-9Y-bhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1208.8" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="1548" y="-81.409295352323838"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="WRE-JE-hqf">
@@ -557,12 +585,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bj5-BT-ASw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.2" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="2250.4000000000001" y="-81.409295352323838"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7pI-AS-lbT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BsK-jw-wIg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kir-jB-BBH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MFa-pn-PJW" kind="relationship" relationship="rootViewController" id="sbD-SE-P2w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53n-OC-Cbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1042" y="-98"/>
         </scene>
     </scenes>
     <resources>
         <image name="addUser" width="32" height="32"/>
         <image name="avatar" width="16" height="16"/>
+        <image name="back" width="32" height="32"/>
         <image name="bg" width="384" height="334"/>
         <image name="lock-icon" width="16" height="16"/>
         <image name="searchUser" width="32" height="32"/>

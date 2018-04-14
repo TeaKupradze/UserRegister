@@ -19,6 +19,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         btnAddClient.layer.cornerRadius = 30
         btnAddClient.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor
         btnAddClient.layer.shadowOffset = CGSize(width: 0, height: 3)

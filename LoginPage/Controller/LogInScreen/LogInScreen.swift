@@ -10,7 +10,7 @@ import UIKit
 
 class LogInScreen: UIViewController {
     
-    
+    //MARK: IBOutlet
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
@@ -20,9 +20,15 @@ class LogInScreen: UIViewController {
     
     }
     
-    
+    //MARK: IBAction
     @IBAction func LogInClickd(_ sender: Any) {
         
     }
     
+    @IBAction func RegisterButtonClickd(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegistrationScreen") as! RegistrationScreen
+        navigationController?.pushViewController(vc, animated: true)
+        
+    
+    }
 }
